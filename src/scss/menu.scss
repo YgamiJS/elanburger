@@ -1,0 +1,151 @@
+@import "./index.scss";
+@import "./variables.scss";
+
+.home {
+  height: min-content;
+  margin-top: 120px;
+
+  &__container {
+    padding: 0;
+  }
+
+  &__title {
+    color: $whiteSmoke100;
+    @include adaptiv-font(66, 28);
+  }
+}
+
+.drinks .products-list__title {
+  margin-bottom: 35px;
+  @include adaptiv-font(52, 24);
+}
+
+.burgersandshawarma .products-list__container {
+  padding: 0 0 50px 0;
+}
+
+.salads .products-list-roster {
+  grid-template-columns: repeat(auto-fill, minmax(416px, 416px));
+  gap: 48px;
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fill, minmax(316px, 1fr));
+  }
+}
+
+.products-list {
+  &__title {
+    font-family: $fontHolgadaBold;
+    color: $whiteSmoke100;
+    @include adaptiv-font(32, 22);
+    font-weight: 400;
+    line-height: 38.4px;
+    margin-bottom: 50px;
+  }
+
+  &__subtitle {
+    color: $whiteSmoke100;
+    margin-bottom: 24px;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 31.2px;
+  }
+
+  &__container {
+    padding: 0 0 50px 0;
+  }
+
+  &-roster {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(416px, 1fr));
+    gap: 24px;
+
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(auto-fill, minmax(316px, 1fr));
+    }
+  }
+}
+
+.sauces .products-list-roster,
+.drinks .products-list-roster {
+  grid-template-columns: repeat(auto-fill, minmax(196px, 196px));
+}
+
+.product-list-roster-wrap .products-list-roster {
+  &:first-child {
+    margin-bottom: 24px;
+  }
+
+  &:last-child {
+    margin-bottom: 72px;
+  }
+}
+
+.sidesandsnacks .card-medium {
+  &__description {
+    color: $white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__title,
+  &__price {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  &__price {
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1024px) {
+  .products-list-roster {
+    grid-template-columns: repeat(auto-fill, minmax(316px, 1fr)) !important;
+  }
+
+  .salads .products-list-roster {
+    gap: 24px;
+  }
+
+  .card-small {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .sauces .products-list-roster,
+  .drinks .products-list-roster {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .sauces .card-small__image,
+  .drinks .card-small__image {
+    height: 125px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .sauces .products-list-roster,
+  .drinks .products-list-roster {
+    grid-template-columns: 1fr !important;
+  }
+
+  .sauces .card-small,
+  .drinks .card-small {
+    max-width: 100% !important;
+  }
+
+  .sauces .card-small__image,
+  .drinks .card-small__image {
+    width: 100% !important;
+    height: 190px !important;
+  }
+}

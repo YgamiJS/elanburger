@@ -1,0 +1,78 @@
+.location-item,
+.link-phone {
+  display: flex;
+  gap: 4px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.link-phone {
+  font-size: 26px;
+  line-height: 31.2px;
+}
+
+.map iframe {
+  border-radius: 8px;
+}
+
+.card-big {
+  max-width: 636px;
+
+  &__description {
+    line-height: 16px;
+  }
+}
+
+.card-small__image {
+  border-radius: 20px;
+}
+
+.card-medium,
+.card-big,
+.card-small {
+  max-width: 416px;
+  width: 100%;
+
+  &__image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    color: $whiteSmoke100;
+    font-family: $fontHolgadaRegular;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+  }
+
+  &__description {
+    color: rgba($white, 0.4);
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+  }
+
+  &__price {
+    font-family: $fontHolgadaBold;
+    color: $whiteSmoke100;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.card-small {
+  max-width: 196px;
+
+  &__image {
+    border-radius: 20px;
+  }
+
+  &__description {
+    line-height: 16px;
+  }
+}
