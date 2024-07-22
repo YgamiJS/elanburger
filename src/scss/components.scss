@@ -28,6 +28,12 @@
   border-radius: 20px;
 }
 
+@media (min-width: 1024px) {
+  .card-small__image {
+    height: 140px;
+  }
+}
+
 .card-medium,
 .card-big,
 .card-small {

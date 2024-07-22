@@ -9,9 +9,20 @@ requisites.textContent = `2023-${new Date().getFullYear()}`;
 
 burger.addEventListener("click", () => {
   burgerMenu.classList.toggle("show");
+  header.classList.add("show");
 
   if (burgerMenu.classList.contains("show")) {
     header.classList.add("active");
+    header.classList.remove("close");
+    setTimeout(() => (burgerMenu.style.opacity = 1), 500);
+  } else {
+    // burgerMenu.classList.add("close");
+
+    header.classList.add("close");
+    header.classList.remove("show");
+    setTimeout(() => (burgerMenu.style.opacity = 0), 500);
+    // setTimeout(() => header.classList.remove("close"), 450);
+    // setTimeout(() => header.classList.remove("close"), 500);
   }
 });
 

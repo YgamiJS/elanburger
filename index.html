@@ -41,7 +41,13 @@
         <div class="header__container container">
           <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="/">
-              <img class="logo" src="/images/logo.svg" alt="Элан бургерная" />
+              <img
+                class="logo"
+                src="/images/logo.svg"
+                alt="Элан бургерная"
+                loading="lazy"
+                fetchpriority="low"
+              />
             </a>
             <button
               class="navbar-toggler"
@@ -54,7 +60,11 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div
+              class="collapse navbar-collapse"
+              id="navbarNavAltMarkup"
+              style="opacity: 0"
+            >
               <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#aboutus"
                   >О нас <span class="sr-only"></span
@@ -71,6 +81,8 @@
                   class="header-info__icon"
                   src="/images/location.svg"
                   alt=""
+                  loading="lazy"
+                  fetchpriority="low"
                 />
                 Средний пр-кт В.О д.76/18
               </p>
@@ -78,7 +90,13 @@
                 class="header-info__link header-info__item header-info__link_phone link-phone"
                 href="tel:+79952342721"
               >
-                <img class="header-info__icon" src="/images/phone.svg" alt="" />
+                <img
+                  class="header-info__icon"
+                  src="/images/phone.svg"
+                  alt=""
+                  loading="lazy"
+                  fetchpriority="low"
+                />
                 +7 (995) 234-27-21
               </a>
             </div>
@@ -87,7 +105,13 @@
       </header>
       <main class="main">
         <section class="home">
-          <img class="home__background" src="/images/background.jpg" alt="" />
+          <img
+            class="home__background"
+            src="/images/background.jpg"
+            alt=""
+            loading="lazy"
+            fetchpriority="low"
+          />
           <div class="home__container container">
             <a class="home__link" href="/menu.html">Меню</a>
           </div>
@@ -97,7 +121,13 @@
             <h2 class="aboutus__title">О нас</h2>
             <div class="row">
               <div class="col-7">
-                <img class="aboutus__image" src="/images/burger1.png" alt="" />
+                <img
+                  class="aboutus__image"
+                  src="/images/burger1.png"
+                  alt=""
+                  loading="lazy"
+                  fetchpriority="low"
+                />
               </div>
               <div class="col-5">
                 <div class="aboutus-content">
@@ -110,6 +140,8 @@
                       class="yandex-certificate__icon"
                       src="/images/yandex-certificate.svg"
                       alt="Хорошее место 2023"
+                      loading="lazy"
+                      fetchpriority="low"
                     />
                     Хорошее место 2023
                   </p>
@@ -123,11 +155,19 @@
             <h2 class="promotions__title">Акции</h2>
             <div class="row promotions-list">
               <div class="col promotions-list__item">
-                <img
-                  class="promotions-list__image"
-                  src="/images/meny-cafe-7.png"
-                  alt=""
-                />
+                <picture>
+                  <source
+                    media="(max-width: 800px)"
+                    srcset="/images/promotion.jpg"
+                  />
+                  <img
+                    class="promotions-list__image"
+                    src="/images/burger2.jpg"
+                    alt=""
+                    loading="lazy"
+                    fetchpriority="low"
+                  />
+                </picture>
                 <h3 class="promotions-list__title">Здесь появятся Акции</h3>
                 <div class="promotions-list__description">
                   Следите за новостями!
@@ -154,8 +194,16 @@
                     class="delivery-card__image"
                     src="/images/yandex-eda.svg"
                     alt=""
+                    loading="lazy"
+                    fetchpriority="low"
                   />
-                  <a class="delivery-card__link" href="#">Заказать</a>
+                  <a
+                    class="delivery-card__link swap"
+                    href="https://eda.yandex.ru/r/elan_burgernaa?placeSlug=elan_burgernaya"
+                  >
+                    Заказать
+                    <span>Заказать</span>
+                  </a>
                 </div>
               </div>
               <div class="col">
@@ -164,13 +212,22 @@
                     class="delivery-card__icon"
                     src="/images/kuper-icon.svg"
                     alt=""
+                    loading="lazy"
+                    fetchpriority="low"
                   />
                   <img
                     class="delivery-card__image"
                     src="/images/kuper.svg"
                     alt=""
+                    loading="lazy"
+                    fetchpriority="low"
                   />
-                  <a class="delivery-card__link" href="#">Заказать</a>
+                  <a
+                    class="delivery-card__link swap swap-green"
+                    href="https://kuper.ru/restaurant/elan-burgernaya?sid=120889"
+                    >Заказать
+                    <span>Заказать</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -187,6 +244,8 @@
                       class="location-item__icon"
                       src="/images/location.svg"
                       alt=""
+                      loading="lazy"
+                      fetchpriority="low"
                     />
                     Средний пр-кт В.О д.76/18
                   </p>
@@ -198,6 +257,8 @@
                       class="link-phone__icon"
                       src="/images/phone.svg"
                       alt=""
+                      loading="lazy"
+                      fetchpriority="low"
                     />
                     +7 (995) 234-27-21
                   </a>
@@ -291,6 +352,8 @@
                     class="social-links__icon"
                     src="/images/vk.svg"
                     alt="Вконтакте"
+                    loading="lazy"
+                    fetchpriority="low"
                   />
                 </a>
               </li>
@@ -303,6 +366,8 @@
                     class="social-links__icon"
                     src="/images/instagram.svg"
                     alt="Instagram"
+                    loading="lazy"
+                    fetchpriority="low"
                   />
                 </a>
               </li>
@@ -313,6 +378,8 @@
               class="requisites__copyright"
               src="/images/copyright.svg"
               alt="Все права сохранены"
+              loading="lazy"
+              fetchpriority="low"
             />
             <span class="requisites__text">
               <span class="requisites__current-year"></span> ИП Рзаев Эльчин
