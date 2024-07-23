@@ -22,7 +22,7 @@ burger.addEventListener("click", () => {
   }
 });
 
-if (window.matchMedia("(min-width: 1024px)")) {
+if (window.matchMedia("(min-width: 1024px)").matches) {
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
@@ -54,4 +54,15 @@ if (window.matchMedia("(min-width: 1024px)")) {
       });
     });
   });
+} else {
+  if (matchMedia("(max-width: 500px)")) {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  }
 }
