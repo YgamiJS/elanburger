@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
+import { resolve } from "path";
 import viteImagemin from "vite-plugin-imagemin";
 
 // https://vitejs.dev/config/
@@ -36,6 +37,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        menu: resolve(__dirname, "menu.html"),
+      },
     },
   },
 });
