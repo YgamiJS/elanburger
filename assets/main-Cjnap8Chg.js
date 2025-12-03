@@ -77,3 +77,16 @@ window.matchMedia("(min-width: 1024px)").matches
             .scrollIntoView({ behavior: "smooth" });
       });
     });
+
+
+window.addEventListener('scroll', function() {
+
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  
+ 
+  if (scrollPosition >= 300) {
+
+    document.querySelector(".header").classList.add("active");
+  
+  }
+});
